@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alma Libre Cerámica - UNPAZ</title>
+    <!-- Tailwind CSS para diseño rápido y limpio -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    </style>
+</head>
+<body class="bg-[#FAF7F2] text-gray-800 flex flex-col min-h-screen">
+
+    <!-- 1. ENCABEZADO ACADÉMICO UNPAZ -->
+    <div class="bg-stone-800 text-stone-200 text-xs py-2 px-4 text-center">
+        <strong>UNPAZ</strong> - Desarrollo Web (2026) | <span>Equipo 3: María del Pilar Toledo, Alexander Alfonso, Julian Benitez, Camila Sangiácomo, Nahuel Suarez</span>
+    </div>
+
+    <!-- 2. BARRA DE NAVEGACIÓN SENCILLA -->
+    <header class="bg-white border-b border-stone-200 py-4 px-6 text-center">
+        <h1 class="text-2xl font-bold text-[#C06C4E] tracking-wide">Alma Libre Cerámica</h1>
+        <p class="text-xs text-stone-500 uppercase tracking-widest mt-1">Cerámica Artesanal & Bienestar • Moreno</p>
+    </header>
+
+    <!-- 3. PRESENTACIÓN DEL COMERCIO -->
+    <section class="max-w-3xl mx-auto px-4 py-8 text-center">
+        <h2 class="text-xl font-bold text-stone-700 mb-2">Tu espíritu y alma hecho forma</h2>
+        <p class="text-sm text-stone-600 leading-relaxed">
+            Creamos piezas artesanales de cerámica hechas y esmaltadas a mano en Moreno, Provincia de Buenos Aires. 
+            Acompañamos cada creación con velas de soja, difusores y sahumerios naturales para armonizar tu hogar.
+        </p>
+    </section>
+
+    <!-- 4. CATÁLOGO BÁSICO DE 4 PRODUCTOS -->
+    <main class="max-w-5xl mx-auto px-4 pb-12 flex-grow w-full">
+        <h3 class="text-lg font-bold text-stone-700 mb-6 text-center">Nuestras Piezas</h3>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <!-- Producto 1 -->
+            <div class="bg-white p-4 rounded-xl shadow-sm border border-stone-200 flex flex-col justify-between">
+                <img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=400&q=80" 
+                     alt="Cuenco Cerámico" class="w-full h-44 object-cover rounded-lg mb-3">
+                <div>
+                    <h4 class="font-bold text-stone-800 text-sm">Cuenco Rústico</h4>
+                    <p class="text-xs text-stone-500 mb-2">Cerámica modelada en torno.</p>
+                    <p class="text-base font-bold text-[#C06C4E]">$7.800</p>
+                </div>
+                <button onclick="comprar('Cuenco Rústico', 7800)" 
+                        class="mt-3 w-full bg-[#C06C4E] hover:bg-[#A35337] text-white py-2 rounded-lg text-xs font-semibold">
+                    Comprar
+                </button>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="bg-white p-4 rounded-xl shadow-sm border border-stone-200 flex flex-col justify-between">
+                <img src="https://images.unsplash.com/photo-1590736704728-f4730bb30770?auto=format&fit=crop&w=400&q=80" 
+                     alt="Portasahumerio" class="w-full h-44 object-cover rounded-lg mb-3">
+                <div>
+                    <h4 class="font-bold text-stone-800 text-sm">Portasahumerio Luna</h4>
+                    <p class="text-xs text-stone-500 mb-2">Con relieve botánico.</p>
+                    <p class="text-base font-bold text-[#C06C4E]">$4.900</p>
+                </div>
+                <button onclick="comprar('Portasahumerio Luna', 4900)" 
+                        class="mt-3 w-full bg-[#C06C4E] hover:bg-[#A35337] text-white py-2 rounded-lg text-xs font-semibold">
+                    Comprar
+                </button>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="bg-white p-4 rounded-xl shadow-sm border border-stone-200 flex flex-col justify-between">
+                <img src="https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=400&q=80" 
+                     alt="Vela de Soja" class="w-full h-44 object-cover rounded-lg mb-3">
+                <div>
+                    <h4 class="font-bold text-stone-800 text-sm">Vela de Soja en Vasija</h4>
+                    <p class="text-xs text-stone-500 mb-2">Esencia de vainilla & coco.</p>
+                    <p class="text-base font-bold text-[#C06C4E]">$9.200</p>
+                </div>
+                <button onclick="comprar('Vela de Soja en Vasija', 9200)" 
+                        class="mt-3 w-full bg-[#C06C4E] hover:bg-[#A35337] text-white py-2 rounded-lg text-xs font-semibold">
+                    Comprar
+                </button>
+            </div>
+
+            <!-- Producto 4 -->
+            <div class="bg-white p-4 rounded-xl shadow-sm border border-stone-200 flex flex-col justify-between">
+                <img src="https://images.unsplash.com/photo-1616401784845-180882ba9ba8?auto=format&fit=crop&w=400&q=80" 
+                     alt="Difusor Aromático" class="w-full h-44 object-cover rounded-lg mb-3">
+                <div>
+                    <h4 class="font-bold text-stone-800 text-sm">Difusor Aromático</h4>
+                    <p class="text-xs text-stone-500 mb-2">Frasco 125ml con varillas.</p>
+                    <p class="text-base font-bold text-[#C06C4E]">$5.900</p>
+                </div>
+                <button onclick="comprar('Difusor Aromático', 5900)" 
+                        class="mt-3 w-full bg-[#C06C4E] hover:bg-[#A35337] text-white py-2 rounded-lg text-xs font-semibold">
+                    Comprar
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Notificación de compra -->
+        <div id="mensajeCompra" class="hidden mt-6 p-3 bg-green-100 border border-green-300 text-green-800 text-xs rounded-lg text-center font-medium"></div>
+    </main>
+
+    <!-- 5. CONTACTO Y FOOTER -->
+    <footer class="bg-white border-t border-stone-200 py-6 px-4 text-center text-xs text-stone-600">
+        <p class="font-bold text-stone-800">Alma Libre Cerámica</p>
+        <p>Ubicación: Moreno, Provincia de Buenos Aires</p>
+        <div class="mt-3 flex justify-center gap-4">
+            <a href="https://wa.me/5491100000000?text=Hola%20Alma%20Libre!%20Quiero%20hacerles%20una%20consulta." 
+               target="_blank" 
+               class="text-green-700 font-bold hover:underline">
+               WhatsApp Directo
+            </a>
+            <span>•</span>
+            <a href="https://instagram.com/alma_libre_ceramica" 
+               target="_blank" 
+               class="text-[#C06C4E] font-bold hover:underline">
+               Instagram @alma_libre_ceramica
+            </a>
+        </div>
+        <p class="mt-4 text-[11px] text-stone-400">Actividad Práctica - Tecnicatura Universitaria en Comercio Electrónico (UNPAZ)</p>
+    </footer>
+
+    <!-- 6. JAVASCRIPT BÁSICO -->
+    <script>
+        function comprar(producto, precio) {
+            const mensaje = document.getElementById('mensajeCompra');
+            mensaje.innerText = "¡Elegiste: " + producto + " ($" + precio.toLocaleString('es-AR') + ")! Abriendo WhatsApp...";
+            mensaje.classList.remove('hidden');
+
+            // Abre WhatsApp con el producto seleccionado
+            setTimeout(function() {
+                const url = "https://wa.me/5491100000000?text=Hola!%20Quiero%20comprar:%20" + encodeURIComponent(producto) + "%20($" + precio + ")";
+                window.open(url, '_blank');
+            }, 600);
+        }
+    </script>
+
+</body>
+</html>
